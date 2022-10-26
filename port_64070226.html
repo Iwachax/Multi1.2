@@ -1,0 +1,499 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, intial-scale=1.0">
+    <script src="https://kit.fontawesome.com/02771a59c8.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chonburi&family=IBM+Plex+Sans+Thai+Looped:wght@400;600&family=Noto+Sans+Thai:wght@400;600&display=swap" rel="stylesheet">
+    <title>Iwachax
+    </title>
+    <style>
+        /*
+      font-family: 'Chonburi', cursive;
+      font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+      font-family: 'Noto Sans Thai', sans-serif; 
+      */
+        
+        body {
+            --ci1: hsl(31, 100%, 70%);
+            --ci2: hsl(120, 50%, 35%);
+            --ci3: hsl(0, 0%, 60%);
+            --ci4: hsl(0, 0%, 100%);
+            --ci5: hsl(0, 100%, 80%);
+            --ci6: hsl(30, 40%, 60%);
+            background-image: url(https://cdn.discordapp.com/attachments/887328123329314826/979510084822511707/IMG_2639.jpg);
+            background: cover;
+            margin: 0;
+            font-family: sans-serif;
+            color: hsl(0, 0%, 100%);
+            font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+        }
+        
+        .bg-ci1 {
+            background-color: var(--ci1) !important
+        }
+        
+        .bg-ci2 {
+            background-color: var(--ci2) !important
+        }
+        
+        .bg-ci3 {
+            background-color: var(--ci3) !important
+        }
+        
+        .bg-ci4 {
+            background-color: var(--ci4) !important
+        }
+        
+        .bg-ci5 {
+            background-color: var(--ci5) !important
+        }
+        
+        .bg-ci6 {
+            background-color: var(--ci6) !important
+        }
+        
+        .cl-ci1 {
+            color: var(--ci1) !important
+        }
+        
+        .cl-ci2 {
+            color: var(--ci2) !important
+        }
+        
+        .cl-ci3 {
+            color: var(--ci3) !important
+        }
+        
+        .cl-ci4 {
+            color: var(--ci4) !important
+        }
+        
+        .cl-ci5 {
+            color: var(--ci5) !important
+        }
+        
+        .cl-ci6 {
+            color: var(--ci6) !important
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--ci1);
+        }
+        
+        a:hover {
+            color: var(--ci4);
+        }
+        
+        nav {
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            box-shadow: 0px 5px 10px #0008;
+            font-family: 'Noto Sans Thai', sans-serif;
+            background-color: var(--ci6);
+        }
+        
+        nav .site {
+            width: 4rem;
+            margin-left: 1rem;
+        }
+        
+        nav .nav-items {
+            height: 100%;
+            width: calc(100% - 5rem);
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        nav a {
+            height: 100%;
+            display: inline-flex;
+            align-items: center;
+            padding: 0 1em;
+            font-weight: bold;
+            transition: all .2s;
+        }
+        
+        nav a:hover {
+            color: white;
+            background: var(--ci1);
+        }
+        
+        .logo {
+            position: fixed;
+            width: 50%;
+            height: 50%;
+            top: 2%;
+            left: 1%;
+        }
+        
+        #header {
+            height: 50vw;
+            font-size: 3.7vw;
+            box-sizing: border-box;
+            text-align: center;
+            background-image: linear-gradient(to top, #0000, #0004), url(https://cdn.discordapp.com/attachments/887328123329314826/979508426310811698/IMG_2637.jpg);
+            background-size: cover;
+            background-position: center;
+            color: #fff9;
+            display: flex;
+            background-attachment: fixed;
+            position: relative;
+        }
+        
+        .header-inner {
+            background-image: linear-gradient(to bottom, #0004, #000c);
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            flex-flow: column wrap;
+            font-family: 'Chonburi', cursive;
+        }
+        
+        .header-inner h1,
+        .header-inner h2 {
+            margin: 0;
+        }
+        
+        .header-inner h2 {
+            font-size: 2em;
+            color: #fff;
+        }
+        
+        .main {
+            max-width: 900px;
+            margin: auto;
+            font-size: var(--size);
+            margin-bottom: 2em;
+        }
+        
+        img {
+            width: 5%;
+        }
+        
+        .edit-font-size {
+            text-align: right;
+            font-size: 1rem;
+        }
+        
+        #palette {
+            display: flex;
+            width: max-content;
+            margin: auto;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .palette-color {
+            width: 64px;
+            height: 64px;
+            background: grey;
+            border-radius: 9px;
+            margin-left: 1.5em;
+            border: .5em solid #fff;
+            /*         box-sizing:border-box; */
+            box-shadow: 0px 5px 10px #0002;
+        }
+        
+        .palette-color .palette-color:first-child {
+            margin: 0;
+        }
+        
+        .article {
+            max-width: 900px;
+            margin: auto;
+            padding: 2em;
+        }
+        
+        .title {
+            color: var(--ci4);
+            background: hsl(240, 20%, 60%);
+            padding: 0.3em .5em;
+            display: inline-block;
+            font-size: 1.9em;
+            font-family: 'Noto Sans Thai', sans-serif;
+            font-family: 'Chonburi', cursive;
+        }
+        
+        .subtitle {
+            font-size: 1.7em;
+            color: var(--ci2);
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+        
+        .lead {
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+        
+        .pic {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0px 5px 10px #0005;
+            margin: 1em 0 2em;
+        }
+        
+        .hr {
+            display: block;
+            width: 200px;
+            background: var(--ci5);
+            height: 4px;
+            margin: auto;
+        }
+        
+        #footer {
+            background: var(--ci3);
+            background-image: linear-gradient(to top, #0000, #0004), url(https://cdn.discordapp.com/attachments/887328123329314826/979489294865563738/dqs_2565-05-26_023313.494.jpg);
+            padding: 2em 1 3em;
+            color: #fffb;
+            background-size: cover;
+            background-position: top center;
+            font-family: 'Noto Sans Thai', sans-serif;
+            color: var(--ci4);
+        }
+        
+        #copy {
+            background: var(--ci5);
+            color: white;
+            padding: 1em 0;
+            text-align: center;
+            font-size: .8em;
+            font-weight: 700;
+            color: #fff8;
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+        
+        .container {
+            font-size: 1.5em;
+            color: hsl(60, 100%, 50%);
+            text-decoration: underline;
+        }
+        
+        .slide {
+            width: 650px;
+            height: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 50px;
+            box-shadow: 0px 0px 20px 5px rgb(151, 151, 150);
+            overflow: hidden;
+            border: 10px solid hsl(120, 50%, 35%);
+            border-radius: 10px;
+        }
+        
+        .slide figure img {
+            width: 20%;
+            height: 350px;
+            float: left;
+        }
+        
+        .slide figure {
+            position: relative;
+            width: 500%;
+            margin: 0px;
+            left: 0px;
+            animation: assignment 15s infinite linear;
+        }
+        
+        @keyframes assignment {
+            0% {
+                left: 0%;
+            }
+            15% {
+                left: 0%;
+            }
+            20% {
+                left: -100%;
+            }
+            35% {
+                left: -100%;
+            }
+            40% {
+                left: -200%;
+            }
+            60% {
+                left: -200%;
+            }
+            65% {
+                left: -300%;
+            }
+            80% {
+                left: -300%;
+            }
+            85% {
+                left: -400%;
+            }
+            100% {
+                left: -400%;
+            }
+        }
+        
+        .img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-position: center;
+            background-size: cover;
+            transform-origin: center;
+            transform-style: preserve-3d;
+            border-radius: 50px;
+            transform: rotateY(calc(var(--i) * 25.7deg)) translateZ(350px);
+            transition: all 4s;
+        }
+        
+        blockquote {
+            margin: 2em;
+            background: var(--ci6);
+            padding: 1em;
+            font-size: 1.3em;
+            border-left: 10px solid var(--ci1);
+            font-family: 'Noto Sans Thai', sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="https://cdn.discordapp.com/attachments/887328123329314826/979686433688277002/audio-speaker-on.png" id="logo">
+        </div>
+        <audio id="song">
+        <source src="https://cdn.discordapp.com/attachments/887328123329314826/979690077368221716/Ella_Fitzgerald_Louis_Armstrong_Dream_A_Little_Dream_Of_Me.ogg" type="audio/ogg">
+     </audio>
+        <script>
+            var song = document.getElementById("song");
+            var logo = document.getElementById("logo");
+            logo.onclick = function() {
+                if (song.paused) {
+                    song.play();
+                    logo.src = "https://cdn.discordapp.com/attachments/887328123329314826/979686433910579200/mute-speaker.png";
+                } else {
+                    song.pause();
+                    logo.src = "https://cdn.discordapp.com/attachments/887328123329314826/979686433688277002/audio-speaker-on.png";
+                }
+            }
+        </script>
+        <div class="nav-items">
+            <a href="#!">Home
+        </a>
+            <a href="#!">Blog
+        </a>
+            <a href="#!">About
+        </a>
+            <a href="#!">Join us
+        </a>
+        </div>
+    </nav>
+    <section id="header">
+        <div class="header-inner">
+            <h1>
+                Portfolio
+            </h1>
+            <h2 style="font-weight:200">
+                Multimedia 2021
+            </h2>
+        </div>
+    </section>
+    <section id="palette">
+        <div class="palette-color bg-ci1">
+        </div>
+        <div class="palette-color bg-ci2">
+        </div>
+        <div class="palette-color bg-ci3">
+        </div>
+        <div class="palette-color bg-ci4">
+        </div>
+        <div class="palette-color bg-ci5">
+        </div>
+        <div class="palette-color bg-ci6">
+        </div>
+    </section>
+    <section class="article">
+        <div class="main" id="main">
+            <div class="edit-font-size">
+                <span>ปรับขนาดตัวอักษร
+        </span>
+                <input type="range" min="20" max="40" step="5" id="slid" onchange="Slid()" value="20">
+            </div>
+            <h2 class="title">
+                She's imperfect but she tries
+            </h2>
+            <p class="lead cl-ci4">
+                วณิชาภรณ์ ชัยศุภสิน รหัสนักศึกษา 64070226 น้องสาวปี 1 ของพี่ ๆ คณะเทคโนโลยีสารสนเทศ สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง ชอบกินก๋วยเตี๋ยวร้านนึงแถวบ้าน
+            </p>
+            <h4 class="subtitle">
+                มีเรื่องอยากจะเล่า : การเติบโตของตัวเอง
+            </h4>
+            <p>
+                <b>สวัสดีมาก ๆ ค่ะ
+        </b> ผ่านมา 1 เทอมเต็มสำหรับวิชานี้(ชอบวีคแรกมากที่สุดเลยค่ะ อาจจะเพราะว่าง่าย5555 แต่ตอนทำการบ้านมีความสุขมาก ๆ เลยนำงานมาใช้เป็นreferenceในงานนี้) เรียนแรก ๆ งงด้วยซ้ำค่ะว่า เอ๊ะ ตอนนี้ TD ให้เขียนอะไร javascript html css หรือทำอะไรนะ
+                งงไปหมดเลยแม่ช่วยลูกช้างด้วย ;-; แต่จริง ๆ เราช้าเองพอได้มาตั้งใจเรียนตั้งใจทำงานก็เข้าใจมากขึ้น แยกได้ว่างานไหนยังไง รู้สึกมีพลัง! However, took time หนักมาก ลืมง่าย สมาธิสั้นด้วยค่ะ ต้องพยายามมากกว่าหลาย ๆ คนแต่ไม่ได้รู้สึกว่าบังคับตัวเองให้เรียนนะคะ
+                เหนื่อยก็หาขนมหวาน ๆ กิน ดื่มน้ำ ปวดหลังก็แค่พัก 'อย่าไปทำให้ทุกอย่างมันยาก' ใช่มั้ยล่ะงับ(รู้สึกดีจริงๆนะคะเวลาคนสอนพูดคำนี้ ไม่กดดัน ขอแค่เข้าใจและทำออกมาให้เต็มที่ที่สุด//T^T) ในนี้น้องพยายามประยุกต์ความรู้จากแลปมาใส่ไว้นะคะ หวังว่าจะชอบและผ่านเกณฑ์ค่ะ
+                แหะ ๆ
+            </p>
+            <div class="slide">
+                <figure>
+                    <img src="https://cdn.discordapp.com/attachments/887328123329314826/979748382400720896/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/887328123329314826/979753850196078622/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/887328123329314826/979754877859270756/unknown.png">
+                    <img src="https://cdn.discordapp.com/attachments/887328123329314826/979748382786592798/11_20220424220727.png">
+                    <img src="https://cdn.discordapp.com/attachments/887328123329314826/979748383210221679/4_20220405222302.png">
+                    <img src="https://cdn.discordapp.com/attachments/887328123329314826/979748382400720896/unknown.png">
+                </figure>
+            </div>
+            <div class="hr">
+            </div>
+            <p>
+                Project ได้ทำเกี่ยวกับอาร์ต วาดชิ้นส่วนยาน Payload กับวาดโลโก้แต่ไม่ได้นำมาใช้ อาจจะเพราะสีพื้นหลังของโลโก้ไม่ค่อยเข้ากันกับงาน ใช้โปรแกรม Adobe Illustrator และ Procreate ในการทำ ได้ลองใช้เส้นรูปแบบ 8-Bit ครั้งแรก ตอนนั้นจะว่ายากก็ไม่เชิงแต่สนุกดีค่ะ
+                อนาคตจะลองฝึกทำแบบอื่น รวมถึงเขียนโค้ดและสร้างสรรค์คอนเทนท์ให้มากขึ้นค่ะ
+            </p>
+            <img scr="https://cdn.discordapp.com/attachments/869650223650201690/967810069423091742/11_20220424222126.png" class="pict">
+            <p>
+                <div class="hr">
+                </div>
+                <blockquote>
+                    <b>What's I learned
+        </b>
+                    <br> ที่เห็นได้ชัดคือ สกิลการทำงานร่วมกับคนอื่นดีขึ้นมาก ได้เรียนรู้การแบ่งงานและทำหน้าที่ของตัวเองให้ดี and I have fixed my time management.
+                </blockquote>
+    </section>
+    <footer id="footer">
+        <div class="article">
+            <h3>
+                Thank you so much
+            </h3>
+            <p>
+                <br> <a href="https://web.facebook.com/wanichabhorn">Facebook</a>
+                <br> <a href="https://www.instagram.com/iwachax/?hl=en">Instagram</a>
+                <br> <a href="https://github.com/Iwachax">Github</a>
+            </p>
+            <div class="container">
+                <div class="m-3">
+                    <a href="https://new.episteme.in.th/course/multimedia-technology-2021/#activity" target="_blank">My assighment</a></a>
+                </div>
+            </div>
+    </footer>
+    </div>
+    <script>
+        var cont = document.getElementById("main");
+
+        function Slid() {
+            var slid = document.getElementById("slid");
+            cont.style.fontSize = slid.value;
+        }
+    </script>
+    <footer id="copy">
+        64070226 ส้มโอ-วณิชาภรณ์
+    </footer>
+</body>
+
+</html>
